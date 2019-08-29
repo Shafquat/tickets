@@ -23,6 +23,19 @@ class TicketsController < ApplicationController
 			
 	end
 	
+	def update
+		if @ticket.update(ticket_params)
+			redirect_to @event, notice: "Event was succcesfully updated!"
+		else
+			render 'edit'
+		end
+	end
+	
+	def destroy
+		@ticket.destroy
+		redirect_to root_path
+	end
+	
 	private
 	def ticket_params
 		params.require(:ticket).permit(:section, :row, :price, :seats)
