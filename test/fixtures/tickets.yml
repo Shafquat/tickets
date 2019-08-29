@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  section: MyString
+  row: MyString
+  price: 9.99
+  seats: MyString
+
+two:
+  section: MyString
+  row: MyString
+  price: 9.99
+  seats: MyString

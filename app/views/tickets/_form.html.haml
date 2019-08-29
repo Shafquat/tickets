@@ -1,0 +1,23 @@
+= simple_form_for @ticket do |f|
+	- if @ticket.errors.any?
+		#errors
+			%h2
+			= pluralize(@ticket.errors.count, "error")
+			prevented this Ticket from saving
+			%ul
+				- @ticket.errors.full_messages.each do |msg|
+					%li= msg
+		
+	.form-group
+		= f.input :section, input_html: {class: "form-control" }
+
+	.form-group
+		= f.input :row, input_html: {class: "form-control" }
+
+	.form-group
+		= f.input :seats, input_html: {class: "form-control" }
+
+	.form-group
+		= f.input :price, input_html: {class: "form-control" }
+
+	= f.button :submit, class: "btn btn-primary"
