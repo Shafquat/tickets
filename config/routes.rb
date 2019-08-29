@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-	resources :tickets
+	resources :events
 	
-	root "tickets#index"
+	root "events#index"
 end
