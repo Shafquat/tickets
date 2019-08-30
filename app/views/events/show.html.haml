@@ -11,6 +11,6 @@
 					.box.panel.panel-default
 					%h4= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats, ticket
 			.panel-footer
-				=link_to "Edit", edit_event_path, class: "btn btn-default"
-				=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+				-#=link_to "Edit", edit_event_path, class: "btn btn-default"
+				-#=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
 
