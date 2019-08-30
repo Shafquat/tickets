@@ -4,7 +4,7 @@
 
 -@tickets.each do |ticket|
 	.box.panel.panel-default
-		%h3= link_to [ticket.section, ticket.row, ticket.seats, ticket.price, ticket.user.email], ticket
+		%h3= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats+" Seller: "+ticket.user.email, ticket
 
 
 =link_to "Back", root_path
