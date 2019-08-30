@@ -9,11 +9,11 @@ class TicketsController < ApplicationController
 	end
 	
 	def new
-		@ticket = Ticket.new
+		@ticket = current_user.tickets.build
 	end
 	
 	def create
-		@ticket = Ticket.new(ticket_params)
+		@ticket = current_user.tickets.build(ticket_params)
 		
 		if @ticket.save
 			redirect_to @ticket, notice: "Successfully loaded your tickets"

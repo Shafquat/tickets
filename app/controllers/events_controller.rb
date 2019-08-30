@@ -35,6 +35,7 @@ class EventsController < ApplicationController
 		@event.destroy
 		redirect_to root_path
 	end
+	
 	private
 	def event_params
 		params.require(:event).permit(:title, :description, :date)
