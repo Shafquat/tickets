@@ -1,9 +1,12 @@
-%p Title of Event
 =@event.title
-%p Description of Event
+%p=@event.date
+%p Description
 =@event.description
-%p Date and Time of Event
-=@event.date
+
+-@tickets.each do |ticket|
+	.box.panel.panel-default
+		%h3= link_to [ticket.section, ticket.row, ticket.seats, ticket.price, ticket.user.email], ticket
+
 
 =link_to "Back", root_path
 =link_to "Edit", edit_event_path

@@ -6,6 +6,7 @@ class EventsController < ApplicationController
 	end
 	
 	def show
+		@tickets = Ticket.where(event_id: @event.id).order("created_at DESC")
 	end
 	
 	def new
