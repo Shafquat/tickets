@@ -1,13 +1,16 @@
-=@event.title
-%p=@event.date
-%p=@event.description
-
--@tickets.each do |ticket|
-	.box.panel.panel-default
-		%h3= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats+" Seller: "+ticket.user.email, ticket
-
-
-=link_to "Back", root_path
-=link_to "Edit", edit_event_path
-=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}
+#event_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading
+				%h2=@event.title
+				%p=@event.date
+			.panel-body
+				%p.description=@event.description
+				%h3 Tickets Available for this Event
+				-@tickets.each do |ticket|
+					.box.panel.panel-default
+					%h4= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats, ticket
+			.panel-footer
+				=link_to "Edit", edit_event_path, class: "btn btn-default"
+				=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
 

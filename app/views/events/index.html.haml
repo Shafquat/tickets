@@ -1,5 +1,12 @@
--@events.each do |event|
-	-# Check if Event is not in the past
-	- if event.date >= Date.today 
-		.box.panel.panel-default
-			%h3= link_to event.title, event
+#event_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading
+				%h2 Upcoming Events
+			.panel-body
+				-@events.each do |event|
+					-# Check if Event is not in the past
+					- if event.date >= Date.today 
+						.box.panel.panel-default
+							%h3= link_to event.title, event
+

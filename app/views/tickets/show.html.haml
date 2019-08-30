@@ -1,22 +1,19 @@
-%p Section
-=@ticket.section
-%p Row
-=@ticket.row
-%p Seats
-=@ticket.seats
-%p Price
-=@ticket.price
+#ticket_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading
+				%h2 Section: #{@ticket.section}, Row: #{@ticket.row}, Seats: #{@ticket.seats}
+				%p Price
+				=@ticket.price
+				%h3 Event
+				=@ticket.event.title
+				=@ticket.event.date
+			.panel-body
+				%p.description
+					Sumbitted by
+					= @ticket.user.email
+				
+			.panel-footer
+				=link_to "Edit", edit_event_path, class: "btn btn-default"
+				=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
 
-%p Event
-=@ticket.event.title
-=@ticket.event.date
-
-
-%p
-Sumbitted by
-= @ticket.user.email
-%br/
-
-=link_to "Back", root_path
-=link_to "Edit", edit_ticket_path
-=link_to "Delete", ticket_path, method: :delete, data: { confirm: "Are you sure?"}
