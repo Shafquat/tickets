@@ -6,7 +6,6 @@ class TicketsController < ApplicationController
 	end
 	
 	def show
-		@event = Event.where(id: @ticket.event_id)
 	end
 	
 	def new
@@ -39,7 +38,7 @@ class TicketsController < ApplicationController
 	
 	private
 	def ticket_params
-		params.require(:ticket).permit(:section, :row, :price, :seats)
+		params.require(:ticket).permit(:section, :row, :price, :seats, :event_id)
 	end
 	
 	def find_ticket

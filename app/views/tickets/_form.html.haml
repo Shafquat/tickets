@@ -21,6 +21,6 @@
 		= f.input :price, input_html: {class: "form-control" }
 		
 	.form-group
-		= f.collection_select :event_id, Event.order(:date), :id, :title, input_html: {class: "form-control" }
+		= f.collection_select :event_id, Event.order(:date), :id, :title, {:prompt => '-- Select an Event --'},  input_html: {class: "form-control" }
 
 	= f.button :submit, class: "btn btn-primary"
