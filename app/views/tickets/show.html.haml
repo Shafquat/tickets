@@ -12,6 +12,8 @@
 				%p.description
 					Sumbitted by
 					= @ticket.user.email
+					-if @ticket.user.trusted = true
+						=image_tag("/images/trusted.png", alt:"Trusted Seller")
 				
 			.panel-footer
 				=link_to "Back to Event", event_path(@ticket.event_id), class: "btn btn-default"
