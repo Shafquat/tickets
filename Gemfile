@@ -22,6 +22,8 @@ gem 'simple_form', '~> 4.1'
 gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'devise', '~> 4.7'
 
+gem 'activeadmin', '~> 2.2'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
