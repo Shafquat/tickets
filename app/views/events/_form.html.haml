@@ -16,6 +16,9 @@
 
 	.form-group
 		= f.input :date, input_html: {class: "form-control" }
+		
+	.form-group
+		= f.collection_select :venue_id, Venue.all, :id, :name, {:prompt => '-- Select an Venue --'},  input_html: {class: "form-control" }
 
 
 	= f.button :submit, class: "btn btn-primary"

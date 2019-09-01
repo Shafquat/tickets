@@ -1,4 +1,4 @@
-ActiveAdmin.register Event do
+ActiveAdmin.register Venue do
     
     config.sort_order = "id_asc"
     config.per_page = 100
