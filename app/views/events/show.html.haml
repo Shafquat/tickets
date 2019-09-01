@@ -4,6 +4,7 @@
 			.panel-heading
 				%h2=@event.title
 				%p=@event.date
+				%p=@event.venue.name
 			.panel-body
 				%p.description=@event.description
 				%h3 Tickets Available for this Event
