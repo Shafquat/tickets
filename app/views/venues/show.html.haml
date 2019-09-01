@@ -1,0 +1,13 @@
+#venue_show.row
+	.col-md-8.col-md-offset-2
+		.panel.panel-default
+			.panel-heading
+				%h2=@venue.name
+				%p=@venue.address
+			.panel-body
+				%p.description=@venue.description
+				%h3 Events Available for this Venue
+				-@venues.each do |event|
+					.box.panel.panel-default
+					%h4= link_to event.title, event
+			.panel-footer
