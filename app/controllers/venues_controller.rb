@@ -2,7 +2,7 @@ class VenuesController < ApplicationController
 	before_action :find_venue, only: [:show, :edit, :update, :destroy]
 	
 	def show
-		@events = Event.where(venue_id: @venue.id).order("created_at DESC")
+		@events = Event.where(venue_id: @venue.id).order("date ASC")
 	end
 	
 	def new
