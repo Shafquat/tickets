@@ -6,8 +6,8 @@
 				%p Price
 				=@ticket.price
 				%h3 Event
-				=@ticket.event.title
-				=@ticket.event.date
+				=link_to @ticket.event.title, event_path(@ticket.event_id)
+				%p=@ticket.event.date
 			.panel-body
 				%p.description
 					Sumbitted by
