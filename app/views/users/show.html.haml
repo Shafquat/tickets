@@ -3,3 +3,19 @@
 		.panel.panel-default
 			.panel-heading
 				%h2=@user.email
+				-if @user.trusted = true
+					=image_tag("/images/trusted.png", alt:"Trusted Seller")
+				%p Account created:
+				=((Time.now - @user.created_at)/ 60 / 60 / 24).floor
+				days ago
+			.panel-body
+				%p.description=@user.number
+				%h3 Tickets Available from @user.email
+				-@tickets.each do |ticket|
+					.box.panel.panel-default
+					%h4= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats, ticket 
+					%h4= link_to ticket.event.title, ticket.event
+			.panel-footer
+				-#=link_to "Edit", edit_event_path, class: "btn btn-default"
+				-#=link_to "Delete", event_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+
