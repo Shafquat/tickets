@@ -11,7 +11,7 @@
 			.panel-body
 				%p.description
 					Sumbitted by
-					= @ticket.user.email
+					=link_to @ticket.user.email, user_path(@ticket.user.id)
 					-if @ticket.user.trusted = true
 						=image_tag("/images/trusted.png", alt:"Trusted Seller")
 				
