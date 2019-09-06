@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AdminUser.create!(email: 'shafquat_a@hotmail.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-AdminUser.create!(email: 'zaidtoorawa@gmail.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+AdminUser.create!(email: 'shafquat_a@hotmail.com', password: 'password', password_confirmation: 'password')
+AdminUser.create!(email: 'zaidtoorawa@gmail.com', password: 'password', password_confirmation: 'password')
 
 Venue.create(name: 'Scotiabank Arena',address: '40 Bay St, Toronto, ON M5J 2X2', description: 'Scotiabank Arena, formerly Air Canada Centre, is a multi-purpose arena located on Bay Street in the South Core district of Downtown Toronto, Ontario, Canada.')
 Venue.create(name: 'Rogers Centre',address: '1 Blue Jays Way, Toronto, ON M5V 1J1', description: 'Rogers Centre, originally named SkyDome, is a multi-purpose stadium in Downtown Toronto, Ontario, Canada, situated just southwest of the CN Tower near the northern shore of Lake Ontario. Opened in 1989 on the former Railway Lands, it is home to the Toronto Blue Jays of Major League Baseball.')
