@@ -6,8 +6,8 @@
 				-if @user.trusted = true
 					Verified Seller #{image_tag("/images/trusted.png", alt:"Trusted Seller")}
 				%p Account created: #{((Time.now - @user.created_at)/ 60 / 60 / 24).floor} days ago
+				%p.description Phone Number: #{number_to_phone(@user.number)}
 			.panel-body
-				%p.description=@user.number
 				%h3 Tickets Available from #{@user.email}
 				-@tickets.each do |ticket|
 					.box.panel.panel-default
