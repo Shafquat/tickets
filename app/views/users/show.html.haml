@@ -3,7 +3,7 @@
 		.panel.panel-default
 			.panel-heading
 				%h2 #{@user.email}
-				-if @user.trusted = true
+				-if @user.trusted == true
 					Verified Seller #{image_tag("/images/trusted.png", alt:"Trusted Seller")}
 				%p Account created: #{((Time.now - @user.created_at)/ 60 / 60 / 24).floor} days ago
 				%p.description Phone Number: #{number_to_phone(@user.number)}
