@@ -15,8 +15,3 @@
 					Price: 
 					= ticket.price
 					%p= link_to "Event: " + ticket.event.title, ticket.event
-					- if current_user == ticket.user.id
-						.panel-footer
-							=link_to "Edit", edit_ticket_path, class: "btn btn-default"
-							=link_to "Delete", ticket_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
-
