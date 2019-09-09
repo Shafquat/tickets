@@ -15,8 +15,10 @@
 					-if @ticket.user.trusted == true
 						=image_tag("/images/trusted.png", alt:"Trusted Seller")
 				
-			.panel-footer
-				=link_to "Back to Event", event_path(@ticket.event_id), class: "btn btn-default"
-				=link_to "Edit", edit_ticket_path, class: "btn btn-default"
-				=link_to "Delete", ticket_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
+
+			- if current_user.id == @ticket.user.id
+				.panel-footer
+					=link_to "Back to Event", event_path(@ticket.event_id), class: "btn btn-default"
+					=link_to "Edit", edit_ticket_path, class: "btn btn-default"
+					=link_to "Delete", ticket_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-default"
 
