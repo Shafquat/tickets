@@ -5,7 +5,8 @@
 				%h2=@event.title
 				%p=@event.date
 				%p=link_to @event.venue.name, venue_path(@event.venue_id)
-				%p= link_to "Post Tickets for this event", new_ticket_path(event_id: @event.id)
+				- if user_signed_in?
+					%p= link_to "Post Tickets for this event", new_ticket_path(event_id: @event.id)
 			.panel-body
 				%p.description=@event.description
 				%h3 Tickets Available for this Event
