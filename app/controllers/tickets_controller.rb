@@ -9,7 +9,12 @@ class TicketsController < ApplicationController
 	end
 	
 	def new
-		@ticket = current_user.tickets.build
+		if (params.has_key?(:event_id))
+			@event = Event.find(params[:event_id])
+			@ticket = current_user.tickets.build :event_id => @event.id
+		else
+			@ticket = current_user.tickets.build
+		end
 	end
 	
 	def create
