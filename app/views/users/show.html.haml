@@ -14,6 +14,5 @@
 				-@tickets.each do |ticket|
 					.box.panel.panel-default
 					%h4= link_to "Section: "+ticket.section+" Row: "+ticket.row+" Seats: "+ticket.seats, ticket 
-					Price: 
-					= ticket.price
+					Price: #{ticket.price}
 					%p= link_to "Event: " + ticket.event.title, ticket.event
