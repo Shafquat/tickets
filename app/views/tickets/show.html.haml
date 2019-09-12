@@ -2,7 +2,8 @@
 	.col-md-8.col-md-offset-2
 		.panel.panel-default
 			.panel-heading
-				%h2 Section: #{@ticket.section}, Row: #{@ticket.row}, Seats: #{@ticket.seats}
+				%h2 Section: #{@ticket.section}, Row: #{@ticket.row}
+				%p Description/Seats: #{@ticket.seats}
 				%p Price
 				=@ticket.price
 				%h3 Event
