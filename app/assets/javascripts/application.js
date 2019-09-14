@@ -16,3 +16,7 @@
 //= require bootstrap-table/bootstrap-table
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+    $('#myTable').dataTable();
+});
