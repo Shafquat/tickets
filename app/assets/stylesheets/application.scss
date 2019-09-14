@@ -19,8 +19,12 @@
 @import "bootstrap-table/bootstrap-table";
 
 body {
-	background: #7aa7b5;
+	background: #000000;
 }
+
+.table tr th {
+    background-color: #e26e6e;
+} 
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
