@@ -23,7 +23,7 @@ gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'devise', '~> 4.7'
 
 gem 'activeadmin', '~> 2.2'
-gem 'jquery-turbolinks', '~> 2.1'
+gem 'bootstrap-table-rails', '~> 1.13', '>= 1.13.4'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
