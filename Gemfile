@@ -22,6 +22,8 @@ gem 'simple_form', '~> 4.1'
 gem 'haml', '~> 5.1', '>= 5.1.2'
 gem 'devise', '~> 4.7'
 
+gem 'cancancan', '~> 3.0', '>= 3.0.1'
+
 gem 'activeadmin', '~> 2.2'
 gem 'bootstrap-table-rails', '~> 1.13', '>= 1.13.4'
 
