@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+
+* Installing Ruby on Rails in Windows 10
+https://gorails.com/setup/windows/10
+^ You can now download the Ubuntu App on Windows 10 and run all your commands from there!
